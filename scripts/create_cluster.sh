@@ -15,13 +15,17 @@ echo "Enabling billing"
 #Getting the Billing account to link with the project id in order to enable use GServices
 export BILLING_ACCOUNT=$(gcloud alpha billing accounts list --format text | grep name | awk {'print $2'} | awk -F "/" {'print $2'})
 
-gcloud alpha billing projects link $PROJECT_ID --billing-account=$BILLING_ACCOUNT
+gcloud beta billing projects link $PROJECT_ID --billing-account=$BILLING_ACCOUNT 
 
+echo "Waiting while Kubernetes engine gets ready (wait a minute)"
+sleep 60
 
 echo "Creating a GKE cluster"
 CLUSTER_NAME=mstakx
 gcloud container clusters create $CLUSTER_NAME
 
+echo "Waiting while the cluster gets ready (wait a minute)"
+sleep 60
 echo "Getting authentication credentials for the cluster"
 gcloud container clusters get-credentials $CLUSTER_NAME
 
