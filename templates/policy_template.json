@@ -1,0 +1,33 @@
+{
+  "bindings": [
+    {
+      "members": [
+        "serviceAccount:service-304966747568@compute-system.iam.gserviceaccount.com",
+        "serviceAccount:service-304966747568@compute-system.iam.gserviceaccount.com"
+      ],
+      "role": "roles/compute.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-304966747568@container-engine-robot.iam.gserviceaccount.com"
+      ],
+      "role": "roles/container.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:304966747568@cloudservices.gserviceaccount.com",
+        "serviceAccount:service-304966747568@containerregistry.iam.gserviceaccount.com",
+        "serviceAccount:304966747568-compute@developer.gserviceaccount.com",
+        "serviceAccount:304966747568@cloudservices.gserviceaccount.com"
+      ],
+      "role": "roles/editor"
+    },
+    {
+      "members": [
+        "user:w.alexanderuc@gmail.com"
+      ],
+      "role": "roles/owner"
+    }
+  ],
+  "version": 1
+}
