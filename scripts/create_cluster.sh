@@ -11,20 +11,12 @@ gcloud config set project $PROJECT_ID
 #Will use the closest region for the United Kingdom in this case "europe-west2" and the availabily zone "a" 
 gcloud config set compute/zone europe-west2-a
 
-#Enabling billing
-#Getting the Project Number and account to update the property into the policy_template.json file and generate a clear policy.json file
-export PROJECT_NUMBER=$(gcloud projects describe $PROJECT_ID --format text | grep projectNumber | awk '{print $2}')
-export ACCOUNT=$(gcloud config get-value account -q)
+echo "Enabling billing"
+#Getting the Billing account to link with the project id in order to enable use GServices
+export BILLING_ACCOUNT=$(gcloud alpha billing accounts list --format text | grep name | awk {'print $2'} | awk -F "/" {'print $2'})
 
-#Making a copy of policy_template to replace default parameters
-POLICY_FILE_TEMPLATE=$PWD/../templates/policy_template.json
-POLICY_FILE=$PWD/../templates/policy.json
-cp -f $POLICY_FILE_TEMPLATE $POLICY_FILE
-sed -i -e "s/w.alexanderuc@gmail.com/$ACCOUNT/g" $POLICY_FILE
-sed -i -e "s/304966747568/$PROJECT_NUMBER/g" $POLICY_FILE
+gcloud alpha billing projects link $PROJECT_ID --billing-account=$BILLING_ACCOUNT
 
-#Applying the policy to the project
-gcloud projects set-iam-policy $PROJECT_ID $POLICY_FILE --quiet
 
 echo "Creating a GKE cluster"
 CLUSTER_NAME=mstakx
