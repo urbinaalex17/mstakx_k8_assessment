@@ -18,14 +18,12 @@ export BILLING_ACCOUNT=$(gcloud alpha billing accounts list --format text | grep
 gcloud beta billing projects link $PROJECT_ID --billing-account=$BILLING_ACCOUNT 
 
 echo "Waiting while Kubernetes engine gets ready, this can take a while..."
-sleep 180
+sleep 160
 
 echo "Creating a GKE cluster"
 CLUSTER_NAME=mstakx
 gcloud container clusters create $CLUSTER_NAME
 
-echo "Waiting while the cluster gets ready (wait a minute)"
-sleep 60
 echo "Getting authentication credentials for the cluster"
 gcloud container clusters get-credentials $CLUSTER_NAME
 
