@@ -17,12 +17,14 @@ export PROJECT_NUMBER=$(gcloud projects describe $PROJECT_ID --format text | gre
 export ACCOUNT=$(gcloud config get-value account -q)
 
 #Making a copy of policy_template to replace default parameters
-cp -f $PWD/../templates/policy_template.json $PWD/../templates/policy.json
-sed -i -e "s/w.alexanderuc@gmail.com/$ACCOUNT/g" $PWD/../templates/policy.json
-sed -i -e "s/304966747568/$PROJECT_NUMBER/g" $PWD/../templates/policy.json
+POLICY_FILE_TEMPLATE=$PWD/../templates/policy_template.json
+POLICY_FILE=$PWD/../templates/policy.json
+cp -f $POLICY_FILE_TEMPLATE $POLICY_FILE
+sed -i -e "s/w.alexanderuc@gmail.com/$ACCOUNT/g" $POLICY_FILE
+sed -i -e "s/304966747568/$PROJECT_NUMBER/g" $POLICY_FILE
 
 #Applying the policy to the project
-gcloud projects set-iam-policy $PROJECT_ID policy.json --quiet
+gcloud projects set-iam-policy $PROJECT_ID $POLICY_FILE --quiet
 
 echo "Creating a GKE cluster"
 CLUSTER_NAME=mstakx
