@@ -163,6 +163,7 @@ metadata:
   name: ingress-frontend-staging
   annotations:
     kubernetes.io/ingress.class: "nginx"
+  namespace: production
 spec:
   rules:
   - host: guestbook.mstakx.io
