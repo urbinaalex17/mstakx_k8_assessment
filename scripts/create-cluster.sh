@@ -1,5 +1,5 @@
 #!/bin/bash
-export PROJECT_ID=mstakx-k8-assessment
+export PROJECT_ID=mstakx-k8s-assessment
 
 echo "Create a project within GKE"
 gcloud projects create $PROJECT_ID --name "K8s Assesment for DevOps Role"
@@ -17,7 +17,7 @@ export BILLING_ACCOUNT=$(gcloud alpha billing accounts list --format text | grep
 
 gcloud beta billing projects link $PROJECT_ID --billing-account=$BILLING_ACCOUNT 
 
-echo "Waiting while Kubernetes engine gets ready, this can take a while..."
+echo "Waiting while Kubernetes engine gets ready, this may take a while..."
 sleep 130
 
 echo "Creating a GKE cluster"

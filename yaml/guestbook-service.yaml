@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: guest-book
+    dev: staging
+  name: staging-guestbook-service
+spec:
+  selector:
+    app: guest-book
+    dev: staging
+  type: ClusterIP
+  ports:
+    port: 80
+    targetPort: 80
