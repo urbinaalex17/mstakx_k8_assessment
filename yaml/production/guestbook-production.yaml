@@ -129,12 +129,17 @@ spec:
       - name: php-redis
         image: gcr.io/google-samples/gb-frontend:v4
         resources:
+          limits:
+            cpu: 150m
+            memory: 400Mi
           requests:
             cpu: 100m
             memory: 100Mi
         env:
         - name: GET_HOSTS_FROM
           value: dns
+        - name: LOAD
+          value: dd if=/dev/zero of=/dev/null bs=100M count=1000
         ports:
         - containerPort: 80
 
