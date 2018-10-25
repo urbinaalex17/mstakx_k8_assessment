@@ -23,6 +23,9 @@ spec:
       - name: master
         image: k8s.gcr.io/redis:e2e  # or just image: redis
         resources:
+          limits:
+            cpu: 150m
+            memory: 400Mi
           requests:
             cpu: 100m
             memory: 100Mi
@@ -76,6 +79,9 @@ spec:
       - name: slave
         image: gcr.io/google_samples/gb-redisslave:v1
         resources:
+          limits:
+            cpu: 150m
+            memory: 400Mi
           requests:
             cpu: 100m
             memory: 100Mi
@@ -131,7 +137,7 @@ spec:
         resources:
           limits:
             cpu: 150m
-            memory: 400Mi
+            memory: 300Mi
           requests:
             cpu: 100m
             memory: 100Mi
@@ -139,7 +145,7 @@ spec:
         - name: GET_HOSTS_FROM
           value: dns
         - name: LOAD
-          value: dd if=/dev/zero of=/dev/null bs=100M count=1000
+          value: "dd if=/dev/zero of=/dev/null bs=100M count=1000"
         ports:
         - containerPort: 80
 
