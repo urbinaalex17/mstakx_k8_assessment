@@ -20,7 +20,7 @@ do
       exit
     fi
   fi
-  if [ $CURRENT_REPLICAS -eq 5 ]
+  if [ $CURRENT_REPLICAS -gt 3 ]
   then
     echo $CURRENT_REPLICAS
     echo -e "\nScaling up the frontend deployment:\n"
