@@ -23,7 +23,7 @@ kubectl -n production get hpa
 echo -e "\nCPU Load test"
 echo -e "In order to perform this CPU load test, please open up 3 terminal sessions in your Google Cloud Shell Environment and execute the following command in each terminal session"
 
-echo -e "\nPlease specify the namespace to perform the testi, followed by [ENTER]"
+echo -e "\nPlease specify the namespace where you want to perform the test, followed by [ENTER]"
 read NAMESPACE
 export $NAMESPACE
 
@@ -35,4 +35,4 @@ do
   echo "kubectl -n $NAMESPACE exec -ti $frontend -- /bin/sh -c \\\$LOAD"
 done
 
-./monitoring.sh
+./monitoring-load.sh
