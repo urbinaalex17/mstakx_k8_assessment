@@ -10,3 +10,4 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/mast
 #For GKE
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/provider/cloud-generic.yaml
 
+sleep 15
