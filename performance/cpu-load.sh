@@ -23,13 +23,12 @@ kubectl -n production get hpa
 echo -e "\nCPU Load test"
 echo -e "In order to perform this CPU load test, please open up 3 terminal sessions in your Google Cloud Shell Environment and execute \
          the following command in each terminal session"
+sleep 20
 FRONTS=$(kubectl -n production get pods -l app=guestbook | grep front | awk {'print $1'})
 for frontend in $FRONTS
 do
-  i=1
-  echo -e "\nExecute this in Terminal $i"
-  echo -e "kubectl -n production exec -ti $frontend -- \$LOAD"
-  sleep 10
+  echo -e "\nExecute the following command in another terminal session"
+  echo -e "kubectl -n production exec -ti $frontend -- /bin/sh -c \$LOAD"
 done
 
 #kubectl -n production get pods -l app=guestbook
