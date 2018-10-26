@@ -4,12 +4,14 @@ STAGING_DIR=$YAML_DIR/staging
 PRODUCTION_DIR=$YAML_DIR/production
 STAGING_FILE=$STAGING_DIR/guestbook-staging.yaml
 PRODUCTION_FILE=$PRODUCTION_DIR/guestbook-production.yaml
+HPA_PRODUCTION_FILE=$YAML_DIR/production-hpa.yaml
+HPA_STAGING_FILE=$YAML_DIR/staging-hpa.yaml
 
 echo -e "\nDeploying Guest-book application on staging namespace"
-kubectl apply -f $STAGING_FILE
+kubectl create -f $STAGING_FILE
 
 echo -e "\nDeploying Guest-book application on production namespace"
-kubectl apply -f $PRODUCTION_FILE
+kubectl create -f $PRODUCTION_FILE
 
 echo -e "\nGathering information about the environments"
 
@@ -21,3 +23,7 @@ echo "$INGRESS_CONTROLLER_IP guestbook.mstakx.io"
 
 echo -e "\nFor Staging:"
 echo "$INGRESS_CONTROLLER_IP staging-guestbook.mstakx.io"
+
+echo -e "\nCreating Horizontal Pod AutoScaler on both namespaces"
+kubectl create -f $HPA_PRODUCTION_FILE
+kubectl create -f $HPA_STAGING_FILE
