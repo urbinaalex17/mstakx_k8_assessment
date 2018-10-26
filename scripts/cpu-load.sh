@@ -25,7 +25,7 @@ echo -e "In order to perform this CPU load test, please open up 3 terminal sessi
 
 echo -e "\nPlease specify the namespace where you want to perform the test, followed by [ENTER]"
 read NAMESPACE
-export $NAMESPACE
+export NAMESPACE
 
 #Gathering the list of running pods
 FRONTS=$(kubectl -n $NAMESPACE get pods -l app=guestbook | grep front | awk {'print $1'})
