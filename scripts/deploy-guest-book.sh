@@ -14,7 +14,7 @@ echo -e "\nDeploying Guest-book application on production namespace"
 kubectl create -f $PRODUCTION_FILE
 
 echo -e "\nGathering information about the environments"
-sleep 10
+sleep 50
 INGRESS_CONTROLLER_IP=$(kubectl -n ingress-nginx get svc | awk {'print $4'} | grep [0-9])
 
 echo -e "\nUpdate your host file as follow:"
