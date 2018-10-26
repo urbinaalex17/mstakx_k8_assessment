@@ -1,6 +1,7 @@
 #!/bin/bash
 #This script will demonstrate how the pods are scaling up and down by increasing/decreasing load on existing pods
-echo -e "\n\nList of the pods in execution:\n"
+echo -e "\n\nOnce you run the commands above, the CPU load will increase cousing the creation of new pods"
+echo -e "\nList of the pods in execution:\n"
 kubectl -n $NAMESPACE get pods -l app=guestbook
 CURRENT_REPLICAS=$(kubectl -n $NAMESPACE get pods -l app=guestbook | grep front | wc -l)
 CHANGE_COUNTER=0
@@ -26,5 +27,5 @@ do
     kubectl -n $NAMESPACE get pods -l app=guestbook
     sleep 360
   fi
-  sleep 10 
+  sleep 5 
 done
