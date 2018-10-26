@@ -28,7 +28,7 @@ FRONTS=$(kubectl -n production get pods -l app=guestbook | grep front | awk {'pr
 for frontend in $FRONTS
 do
   echo -e "\nExecute the following command in another terminal session"
-  echo -e "kubectl -n production exec -ti $frontend -- /bin/sh -c \$LOAD"
+  echo "kubectl -n production exec -ti $frontend -- /bin/sh -c \\\$LOAD"
 done
 
 #kubectl -n production get pods -l app=guestbook
