@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo -e "\n\nCreating the NGINX Ingress Controller"
 #initialize your user as a cluster-admin
 kubectl create clusterrolebinding cluster-admin-binding --clusterrole cluster-admin --user $(gcloud config get-value account)
 
