@@ -22,7 +22,6 @@ do
   fi
   if [ $CURRENT_REPLICAS -gt 3 ]
   then
-    echo $CURRENT_REPLICAS
     echo -e "\nScaling up the frontend deployment:\n"
     kubectl -n $NAMESPACE get pods -l app=guestbook
     sleep 360
