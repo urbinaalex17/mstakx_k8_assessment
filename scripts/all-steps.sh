@@ -10,3 +10,5 @@
 ./create-namespaces.sh
 #Deploy app
 ./deploy-guest-book.sh
+#CPU Load
+./cpu-load.sh
