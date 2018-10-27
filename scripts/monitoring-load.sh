@@ -1,6 +1,6 @@
 #!/bin/bash
 #This script will demonstrate how the pods are scaling up and down by increasing/decreasing load on existing pods
-echo -e "\n\nOnce you run the commands above, the CPU load will increase cousing the creation of new pods"
+echo -e "\n\nOnce you run the commands above, the CPU load will increase causing the creation of new pods"
 echo -e "\nList of the pods in execution:\n"
 kubectl -n $NAMESPACE get pods -l app=guestbook
 CURRENT_REPLICAS=$(kubectl -n $NAMESPACE get pods -l app=guestbook | grep front | wc -l)

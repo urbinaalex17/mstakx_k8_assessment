@@ -1,5 +1,5 @@
 #!/bin/bash
-export PROJECT_ID=mstakx-k8s-assessment
+#export PROJECT_ID=mstakx-k8s-assessment
 
 echo "Create a project within GKE"
 gcloud projects create $PROJECT_ID --name "K8s Assesment for DevOps Role"
@@ -10,7 +10,7 @@ gcloud config set project $PROJECT_ID
 
 echo "Enabling billing"
 #Getting the Billing account to link with the project id in order to enable use GServices
-export BILLING_ACCOUNT=$(gcloud alpha billing accounts list --format text | grep name | awk {'print $2'} | awk -F "/" {'print $2'})
+BILLING_ACCOUNT=$(gcloud alpha billing accounts list --format text | grep name | awk {'print $2'} | awk -F "/" {'print $2'})
 
 gcloud beta billing projects link $PROJECT_ID --billing-account=$BILLING_ACCOUNT 
 

@@ -28,4 +28,3 @@ echo -e "\nCreating Horizontal Pod AutoScaler on both namespaces"
 kubectl create -f $HPA_PRODUCTION_FILE
 kubectl create -f $HPA_STAGING_FILE
 
-sleep 25
