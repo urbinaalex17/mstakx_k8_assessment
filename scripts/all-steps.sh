@@ -31,4 +31,4 @@ export REGION="europe-west2"
 #CPU Load
 ./cpu-load.sh
 
-echo -e "\n\nTo clean up execute the cleanap.sh script"
+echo -e "\n\nTo clean up execute the cleanup.sh script, remember to update the variables."

@@ -17,5 +17,5 @@ gcloud beta billing projects link $PROJECT_ID --billing-account=$BILLING_ACCOUNT
 echo -e "\nWaiting while Kubernetes engine gets ready, this may take a while..."
 sleep 240
 
-echo -e "Project $PROJECT_ID is ready to user the Kubernetes engine"
+echo -e "Project $PROJECT_ID is ready to use the Google Kubernetes Engine"
 

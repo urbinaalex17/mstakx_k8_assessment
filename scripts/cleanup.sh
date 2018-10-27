@@ -12,7 +12,7 @@ export REGION="europe-west2"
 echo "Deleting the cluster created earlier"
 gcloud config set project $PROJECT_ID
 gcloud config set compute/zone $REGION
-gcloud container clusters delete mstakx --quiet
+gcloud container clusters delete $CLUSTER_NAME --quiet
 
 
 echo "Deleting the project created earlier"
