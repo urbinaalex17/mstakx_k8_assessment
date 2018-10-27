@@ -20,8 +20,12 @@ Please refer to [mStakx Cluster Desing](mStack-cluster-cpu-memory-desing.xlsx) f
 
 ## What method was chosen to install the demo application and ingress controller on the cluster, justify the method used
 
-
+Both the application and ingress controller are installed via YAML files as pods. It is the easiest way to install the ingress controller. Due to the fact that there is no special configuration related to ingress controller <--> application.
 
 ## What would be your chosen solution to monitor the application on the cluster and why?
 
+[Strackdriver](https://app.google.stackdriver.com), due to the fact that it has native integration with Google Cloud Platform, the process to enable and create dashboards with custom metric is relatively easy.
+
 ## What additional components / plugins would you install on the cluster to manage it better?
+
+
