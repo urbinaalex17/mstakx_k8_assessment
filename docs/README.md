@@ -12,6 +12,9 @@ Node 1 | 2 | 3.75GB | europe-west2-a
 Node 2 | 2 | 3.75GB | europe-west2-b 
 Node 3 | 2 | 3.75GB | europe-west2-c 
 
+Multi-AZ was enabled in the cluster design, thus, it can cope with a node failure, whether an OS or an Availability Zone disaster.
+
+The region chosen was europe-west2 due to the fact that it is the closest region for The United Kingdom
 
 Please refer to [mStakx Cluster Desing](mStack-cluster-cpu-memory-desing.xlsx) for further information 
 
