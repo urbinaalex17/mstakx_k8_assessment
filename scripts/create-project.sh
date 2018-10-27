@@ -19,7 +19,7 @@ sleep 130
 
 echo -e "\nEnabling Containers API"
 gcloud services enable container.googleapis.com
-sleep 20
+sleep 30
 
 echo -e "\nProject $PROJECT_ID is ready to use the Google Kubernetes Engine"
 

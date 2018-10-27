@@ -10,6 +10,7 @@
 #
 ##########################################
 #PROJECT_ID is used to create a project within Google Cloud Platform
+#Project IDs must start with a lowercase letter and can have lowercase ASCII letters, digits or hyphens. Project IDs must be between 6 and 30 characters.
 export PROJECT_ID="mstakx-k8s-assessment"
 #CLUSTER_NAME is used in the creation of the cluster, this is the name that will be set on the Kubernetes Engine page.
 export CLUSTER_NAME="mstakx"

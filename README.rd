@@ -1,6 +1,5 @@
----------------------------------------------------------------------------------------
 
-PRE-REQUISITES
+# PRE-REQUISITES
 
 All the scripts were designed to be executed from within the Google Cloud Shell
 https://console.cloud.google.com/cloudshell/
@@ -12,9 +11,8 @@ It's important to have at least one Billing Acount activated, otherwise all the 
 Check this out with the link below:
 https://console.cloud.google.com/billing
 
----------------------------------------------------------------------------------------
 
-CUSTOMIZING THE PROJECT'S NAME, CLUSTER'S NAME AND REGION
+## CUSTOMIZING THE PROJECT'S NAME, CLUSTER'S NAME AND REGION
 
 Please update the following variables in the all-steps.sh script in the scripts folder prior to its execution, otherwise the creation is likely to fail due to Google maintains unique project IDs.
 
@@ -28,23 +26,20 @@ Variable used in the creation of the cluster, this property will set the closest
 REGION="europe-west2"
 
 
----------------------------------------------------------------------------------------
 
-CPU LOAD TEST
+## CPU LOAD TEST
 
 If the creation of the project and cluster went right, you will need to open up 3 terminal sessions more. Make sure to disable Tmux integration, for further information please refere to https://cloud.google.com/shell/docs/features#tmux_support
 
 
----------------------------------------------------------------------------------------
 
-DNS SETTINGS
+## DNS SETTINGS
 
 The script will tell you the proper entries you need to create in your hosts file in order to reach staging-guestbook.mstakx.io and guestbook.mstakx.io pages.
 
 
----------------------------------------------------------------------------------------
 
-USING THE WRAPPER SCRIPT
+## USING THE WRAPPER SCRIPT
 
 
 Once you had been checked out the previous sections, now you are able to execute the all-steps.sh script in the scripts folder as follow:
@@ -52,5 +47,6 @@ Once you had been checked out the previous sections, now you are able to execute
 cd mstakx_k8_assessment/scripts
 ./all-steps.sh
 
----------------------------------------------------------------------------------------
+# DOCUMENTATION
+
 
