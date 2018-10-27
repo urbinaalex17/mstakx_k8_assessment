@@ -16,7 +16,7 @@ https://console.cloud.google.com/billing
 
 CUSTOMIZING THE PROJECT'S NAME, CLUSTER'S NAME AND REGION
 
-Please update the following variables in the all-steps.sh script prior to its execution, otherwise the creation is likely to fail due to Google maintains unique project IDs.
+Please update the following variables in the all-steps.sh script in the scripts folder prior to its execution, otherwise the creation is likely to fail due to Google maintains unique project IDs.
 
 Variable used to create a project within Google Cloud Platform
 PROJECT_ID="mstakx-k8s-assessment"
