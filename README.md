@@ -45,5 +45,5 @@ Once you had been checked out the previous sections, now you are able to execute
 
 # Documentation
 
-Details are documented in the [DOCS.md](docs/DOCS.md)
+Details are documented in the [README.md](docs/README.md)
 
