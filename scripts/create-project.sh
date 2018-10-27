@@ -15,7 +15,7 @@ BILLING_ACCOUNT=$(gcloud alpha billing accounts list --format text | grep name |
 gcloud beta billing projects link $PROJECT_ID --billing-account=$BILLING_ACCOUNT 
 
 echo -e "\nWaiting while Kubernetes engine gets ready, this may take a while..."
-sleep 130
+sleep 240
 
 echo -e "Project $PROJECT_ID is ready to user the Kubernetes engine"
 
