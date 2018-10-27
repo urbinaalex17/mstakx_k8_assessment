@@ -1,8 +1,7 @@
 
 # Prerequisites
 
-All the scripts were designed to be executed from within the Google Cloud Shell
-https://console.cloud.google.com/cloudshell/
+All the scripts were designed to be executed from within the [Google Cloud Shell](https://console.cloud.google.com/cloudshell)
 
 Once there, you can clone the entire repository as follow:
 git clone https://github.com/urbinaalex17/mstakx_k8_assessment.git
@@ -19,7 +18,7 @@ Project IDs must start with a lowercase letter and can have lowercase ASCII lett
 
 PROJECT_ID="mstakx-k8s-assessment"
 
-Variable used in the creation of the cluster, this is the cluster's name that will be set on the [Kubernetes Engine page.] (https://console.cloud.google.com/kubernetes)
+Variable used in the creation of the cluster, this is the cluster's name that will be set on the [Kubernetes Engine page.](https://console.cloud.google.com/kubernetes)
 
 CLUSTER_NAME="mstakx"
 
