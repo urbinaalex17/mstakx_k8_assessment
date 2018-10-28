@@ -7,7 +7,7 @@ OS memory/cpu utilization, as well as cluster services were taken into considera
 
 
 Node     | CPU  | Memory | Machine Type  | Availability Zone
--------  | ---- | ------ | ----------------
+-------  | ---- | ------ | -------------   ----------------
 Worker 1 | 2    | 3.75GB | custom-2-3840 | europe-west2-a 
 Worker 2 | 2    | 3.75GB | custom-2-3840 | europe-west2-b 
 Worker 3 | 2    | 3.75GB | custom-2-3840 | europe-west2-c 
