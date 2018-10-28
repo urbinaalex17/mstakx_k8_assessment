@@ -6,11 +6,11 @@ There are sufficient resources available in the cluster to run the application i
 OS memory/cpu utilization, as well as cluster services were taken into consideration during the cluster design.
 
 
-Node   | CPU  | Memory | Availability Zone
--------| ---- | ------ | ----------------
-Node 1 | 2 | 3.75GB | europe-west2-a 
-Node 2 | 2 | 3.75GB | europe-west2-b 
-Node 3 | 2 | 3.75GB | europe-west2-c 
+Node     | CPU  | Memory | Machine Type  | Availability Zone
+-------  | ---- | ------ | ----------------
+Worker 1 | 2    | 3.75GB | custom-2-3840 | europe-west2-a 
+Worker 2 | 2    | 3.75GB | custom-2-3840 | europe-west2-b 
+Worker 3 | 2    | 3.75GB | custom-2-3840 | europe-west2-c 
 
 Multi-AZ was enabled in the cluster design, thus, it can cope with a node failure, whether an OS or an Availability Zone disaster.
 
@@ -20,11 +20,13 @@ Please refer to [mStakx Cluster Desing](mStack-cluster-cpu-memory-desing.xlsx) f
 
 ## What method was chosen to install the demo application and ingress controller on the cluster, justify the method used
 
+Bash scripts were created in every step of the installation, this approach is effective in order to execute from within the Google Cloud Shell.
+
 Both the application and ingress controller are installed via YAML files as pods. It is the easiest way to install the ingress controller. Due to the fact that there is no special configuration related to ingress controller <--> application.
 
 ## What would be your chosen solution to monitor the application on the cluster and why?
 
-[Strackdriver](https://app.google.stackdriver.com), due to the fact that it has native integration with Google Cloud Platform, the process to enable and create dashboards with custom metric is relatively easy.
+[Strackdriver](https://app.google.stackdriver.com), due to the fact that it has native integration with Google Cloud Platform, the process to enable and create dashboards with custom metric is relatively easy. Cloud Monitoring and Cloud Logging drivers are enabled in the cluster creation step.
 
 ## What additional components / plugins would you install on the cluster to manage it better?
 
