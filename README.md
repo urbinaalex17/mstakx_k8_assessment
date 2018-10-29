@@ -12,7 +12,7 @@ It's important to have one [Billing Acount activated](https://console.cloud.goog
 
 ## Customizing the project's name, cluster's name and region
 
-Please update the following variables in the all-steps.sh script in the scripts folder prior to its execution, otherwise the creation is likely to fail due to Google maintains unique project IDs.
+Please update the following variables in the mstakx.config file in the scripts folder, prior to its execution, otherwise the creation is likely to fail due to Google maintains unique project IDs.
 
 Variable used to create a project within Google Cloud Platform.
 Project IDs must start with a lowercase letter and can have lowercase ASCII letters, digits or hyphens. Project IDs must be between 6 and 30 characters.

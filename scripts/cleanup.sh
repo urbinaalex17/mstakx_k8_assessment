@@ -1,11 +1,11 @@
 #!/bin/bash
 ##########################################
-#PROJECT_ID was used to create the project within Google Cloud Platform
-export PROJECT_ID="mstakx-k8s-assessment"
-#CLUSTER_NAME was used in the creation of the cluster, this is the name that is set on the Kubernetes Engine page.
-export CLUSTER_NAME="mstakx"
-#REGION was used in the creation of the cluster, this property set the closest region for the United Kingdom in this case "europe-west2".
-export REGION="europe-west2"
+#It read the variables from the config file
+source mstakx.config
+
+export PROJECT_ID
+export CLUSTER_NAME
+export REGION
 
 #########################################
 
