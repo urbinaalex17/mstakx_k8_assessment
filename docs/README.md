@@ -26,8 +26,11 @@ Both the application and ingress controller are installed via YAML files as pods
 
 ## What would be your chosen solution to monitor the application on the cluster and why?
 
-[Strackdriver](https://app.google.stackdriver.com), due to the fact that it has native integration with Google Cloud Platform, the process to enable and create dashboards with custom metric is relatively easy. Cloud Monitoring and Cloud Logging drivers are enabled in the cluster creation step.
+[Strackdriver](https://app.google.stackdriver.com), due to the fact that it has native integration with Google Cloud Platform, the process to enable and create dashboards with custom metric is relatively easy. Cloud Monitoring and Cloud Logging drivers are enabled in the cluster creation step. 
+
 
 ## What additional components / plugins would you install on the cluster to manage it better?
+
+[Helm](https://github.com/helm/helm): The Kubernetes Package Manager
 
 

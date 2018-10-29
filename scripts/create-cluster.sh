@@ -11,7 +11,7 @@ echo -e "\nCreating a GKE cluster"
 #REGION="europe-west2"
 gcloud config set compute/zone $REGION
  
-gcloud beta container clusters create "$CLUSTER_NAME" --username "admin" --cluster-version "1.9.7-gke.6" --machine-type "custom-2-3840" --image-type "COS" --disk-type "pd-standard" --disk-size "100" --num-nodes "1" --enable-cloud-logging --enable-cloud-monitoring --addons HorizontalPodAutoscaling,HttpLoadBalancing,KubernetesDashboard --enable-autoupgrade --enable-autorepair
+gcloud beta container clusters create "$CLUSTER_NAME" --username "admin" --cluster-version "1.9.7-gke.6" --machine-type "custom-2-3840" --image-type "COS" --disk-type "pd-standard" --disk-size "100" --num-nodes "1" --enable-cloud-logging --enable-cloud-monitoring --addons HorizontalPodAutoscaling,HttpLoadBalancing --enable-autoupgrade --enable-autorepair
 
 echo "Getting authentication credentials for the cluster"
 gcloud container clusters get-credentials $CLUSTER_NAME

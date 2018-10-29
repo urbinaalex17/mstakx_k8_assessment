@@ -21,5 +21,7 @@ echo -e "\nEnabling Containers API"
 gcloud services enable container.googleapis.com
 sleep 30
 
-echo -e "\nProject $PROJECT_ID is ready to use the Google Kubernetes Engine"
+echo -e "\nProject $PROJECT_ID should be ready to use Google Kubernetes Engine, please verify with following link: https://console.cloud.google.com/kubernetes/ and select the newly created project "$PROJECT_ID"" 
+echo -e "\nIf there's a message about "Kubernetes Engine is getting ready", please wait until the process finishes up and then press ENTER"
+read ENTER
 
