@@ -8,7 +8,7 @@ echo -e "\nConfiguring default settings for gcloud"
 #Set the project
 gcloud config set project $PROJECT_ID
 
-echo -e"\nEnabling billing"
+echo -e "\nEnabling billing"
 #Getting the Billing account to link with the project id in order to enable use GServices
 BILLING_ACCOUNT=$(gcloud alpha billing accounts list --format text | grep name | awk {'print $2'} | awk -F "/" {'print $2'})
 
