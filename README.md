@@ -12,7 +12,7 @@ It's important to have one [Billing Acount activated](https://console.cloud.goog
 
 ## Customizing the project's name, cluster's name and region
 
-Please update the following variables in the mstakx.config file in the scripts folder, prior to its execution, otherwise the creation is likely to fail due to Google maintains unique project IDs.
+Please update the following variables in the mstakx.config file, located in the scripts folder, prior to its execution, otherwise the creation is likely to fail due to Google maintains unique project IDs.
 
 Variable used to create a project within Google Cloud Platform.
 Project IDs must start with a lowercase letter and can have lowercase ASCII letters, digits or hyphens. Project IDs must be between 6 and 30 characters.
@@ -38,10 +38,13 @@ If the creation of the project and cluster went right, you will need to open up 
 The script will tell you the proper entries you need to create in your hosts file in order to reach staging-guestbook.mstakx.io and guestbook.mstakx.io pages.
 
 
-## Using the wrapper script
+# Using the wrapper script
 
-Once you had been checked out the previous sections, now you are able to execute the all-steps.sh script in the scripts folder.
+Once you had been checked out the previous sections, now you are able to execute the all-steps.sh script, located in the scripts folder.
 
+# Cleaning up
+
+To delete the project and cluster execute the cleanup.sh script, located in the scripts folder. 
 
 # Documentation
 
